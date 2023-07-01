@@ -11,15 +11,47 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@pinia/nuxt": "^0.4.11",
     "@types/node": "^18",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
     "@unocss/eslint-config": "^0.53.4",
     "@unocss/nuxt": "^0.53.4",
+    "@vueuse/core": "^10.2.1",
     "@vueuse/nuxt": "^10.2.1",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier-vue": "^4.2.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "nuxt": "^3.6.1",
-    "pinia": "^2.1.4",
+    "postcss": "^8.4.24",
+    "postcss-html": "^1.5.0",
+    "postcss-scss": "^4.0.6",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "sass": "^1.63.6",
+    "stylelint": "^15.9.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-order": "^6.0.3",
     "typescript": "^5.1.6",
+    "unocss": "^0.53.4",
+    "vite-svg-loader": "^4.0.0",
     "vue-tsc": "^1.8.3"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "pinia": "^2.1.4",
+    "vue-final-modal": "^4.4.3"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,ts,vue}": [
+      "eslint --max-warnings=0"
+    ],
+    "./src/**/*.{scss,vue}": [
+      "stylelint"
+    ]
   }
 }
