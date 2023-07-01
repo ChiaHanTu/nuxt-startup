@@ -45,10 +45,10 @@
     "vue-final-modal": "^4.4.3"
   },
   "lint-staged": {
-    "./src/**/*.{js,ts,vue}": [
+    "./**/*.{js,ts,vue}": [
       "eslint --max-warnings=0"
     ],
-    "./src/**/*.{scss,vue}": [
+    "./**/*.{scss,vue}": [
       "stylelint"
     ]
   }
