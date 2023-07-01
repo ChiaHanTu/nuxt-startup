@@ -21,9 +21,4 @@ export default defineNuxtConfig({
     plugins: [svgLoader()],
   },
   devtools: { enabled: true },
-  postcss: {
-    plugins: {
-      autoprefixer: {},
-    },
-  },
 });
