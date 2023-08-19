@@ -1,0 +1,15 @@
+:root {
+  --footer-bottom-height: 42px;
+
+  @media screen and (width >= 1024px) {
+    --header-height: 70px;
+    --footer-top-height: 84px;
+    --container-padding: 30px;
+  }
+
+  @media screen and (width < 1024px) {
+    --header-height: 50px;
+    --footer-top-height: 142px;
+    --container-padding: 20px;
+  }
+}
