@@ -19,7 +19,6 @@ declare global {
 
 declare global {
   interface ObjectConstructor {
-    // eslint-disable-next-line prettier-vue/prettier
     fromEntries<T = any, K = string>(entries: Iterable<readonly [K, T]>): Record<K, T>;
   }
 }

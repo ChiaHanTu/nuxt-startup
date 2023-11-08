@@ -1,6 +1,6 @@
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(nuxtApp => {
   const userAgent = process.server
-    ? nuxtApp.ssrContext?.event.node.req.headers["user-agent"] || ""
+    ? nuxtApp.ssrContext?.event.node.req.headers['user-agent'] || ''
     : navigator.userAgent;
 
   const isMobile =
@@ -8,5 +8,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       userAgent
     );
 
-  nuxtApp.vueApp.config.globalProperties.$isMobile = isMobile;
+  return {
+    provide: {
+      isMobile,
+    },
+  };
 });
