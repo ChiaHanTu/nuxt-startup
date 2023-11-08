@@ -5,7 +5,7 @@ interface TraversalFunction {
   ): HTMLElement | null;
 }
 
-export const hasWindow = typeof window !== 'undefined';
+export const hasWindow = typeof window !== "undefined";
 
 export function getOffsetTop() {
   if (!hasWindow) return 0;
@@ -26,9 +26,9 @@ export function moveFocus(
   // NOTE: 確認為何在 Vue 2 不會取得 #text element，但 Vue 3 會，儘管不存在。
   while (nextFocus) {
     const nextFocusDisabled =
-      nextFocus.getAttribute?.('aria-disabled') === 'true';
+      nextFocus.getAttribute?.("aria-disabled") === "true";
 
-    if (!nextFocus.hasAttribute?.('tabindex') || nextFocusDisabled) {
+    if (!nextFocus.hasAttribute?.("tabindex") || nextFocusDisabled) {
       // Move to the next element.
       nextFocus = traversalFn(container, nextFocus);
     } else {
