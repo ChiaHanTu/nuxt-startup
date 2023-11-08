@@ -8,9 +8,6 @@ module.exports = {
   ignorePatterns: ["!.*"],
   plugins: ["import"],
   extends: [
-    // "plugin:prettier-vue/recommended",
-    // "prettier",
-
     "eslint:recommended",
     "plugin:vue/vue3-recommended",
     "plugin:@typescript-eslint/recommended",
@@ -163,13 +160,4 @@ module.exports = {
       },
     },
   ],
-  // settings: {
-  //   "prettier-vue": {
-  //     SFCBlocks: {
-  //       script: true,
-  //       template: false,
-  //       style: true,
-  //     },
-  //   },
-  // },
 };
