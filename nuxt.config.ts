@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import svgLoader from 'vite-svg-loader';
+import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -10,15 +11,16 @@ export default defineNuxtConfig({
       },
       title: 'nuxt-startup',
       viewport: 'width=device-width,initial-scale=1',
-      link: [{ rel: 'icon', href: '/img/logo-icon.png' }],
+      // link: [{ rel: 'icon', href: '/img/logo-icon.png' }],
       meta: [
         { name: 'description', content: 'nuxt-startup' },
       ],
     },
   },
-  modules: ['@unocss/nuxt', '@pinia/nuxt', '@vueuse/nuxt'],
+  modules: ['@pinia/nuxt', '@vueuse/nuxt'],
   vite: {
     plugins: [
+      tailwindcss(),
       svgLoader({
         svgoConfig: {
           plugins: [
@@ -40,11 +42,6 @@ export default defineNuxtConfig({
       apiUrl: process.env.NUXT_API_URL,
     },
   },
-  css: [
-    // reset css
-    '@unocss/reset/tailwind.css',
-    // 全域共用的自定義 css
-    resolve(__dirname, './assets/scss/main.scss'),
-  ],
+  css: ['~/assets/scss/main.scss', '~/assets/main.css'],
   devtools: { enabled: true },
 });
