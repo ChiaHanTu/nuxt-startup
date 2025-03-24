@@ -131,11 +131,6 @@ module.exports = {
     "vue/prefer-separate-static-class": "error",
     "vue/padding-line-between-blocks": "error",
 
-    /**
-     * 這個設定與 prettier 衝突
-     *
-     * @see https://github.com/prettier/prettier/issues/5814
-     */
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-explicit-any": "off",
