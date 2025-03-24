@@ -17,6 +17,7 @@ module.exports = {
   rules: {
     // basic
     "at-rule-no-unknown": null,
+    "at-rule-no-deprecated": null,
     "max-nesting-depth": null,
     "selector-max-compound-selectors": null,
     "selector-pseudo-class-no-unknown": null,
