@@ -3,7 +3,7 @@ import { defineAsyncComponent, ref } from "vue";
 import { useModal } from "vue-final-modal";
 
 type ModalContainerProps = ComponentProps<
-  typeof import("@/components/Organism/ModalContainer.vue")["default"]
+  typeof import("@/components/ModalContainer.vue")["default"]
 >;
 
 type ModalContainerOptions = Omit<
@@ -15,7 +15,7 @@ type ModalContainerOptions = Omit<
 };
 
 const LazyModalContainer = defineAsyncComponent(
-  () => import("@/components/Organism/ModalContainer.vue")
+  () => import("@/components/ModalContainer.vue")
 );
 
 export default () => {
